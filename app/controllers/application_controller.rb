@@ -9,5 +9,8 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !current_user.nil?
   end
+  
+  helper_method :method_name
+
 end
 
