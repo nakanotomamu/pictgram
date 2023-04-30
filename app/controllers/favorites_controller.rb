@@ -3,12 +3,9 @@ class FavoritesController < ApplicationController
     @favorite_topics = current_user.favorite_topics
   end
   
-  # def posts  
-  #   @user = @user.posts
-  #   @favarites_count = 0
-  #   @user_posts.each do |post|
-  #   @favarites_count += post.favarites.count
-  #   end
+  # def index
+  #   @posts = Post.all.order(created_at: :desc)
+  # + @post_favorites_count = favorites.group(:post_id).count
   # end
   
   def create
