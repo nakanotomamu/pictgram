@@ -18,7 +18,10 @@ class FavoritesController < ApplicationController
     else
       redirect_to topics_path, danger: 'お気に入りに登録に失敗しました'
     end
-    
-    
+  
+  def destory
+    favorite.destroy
+    redirect_to topics_path(params[:topic_id])
+  end
   end
 end
